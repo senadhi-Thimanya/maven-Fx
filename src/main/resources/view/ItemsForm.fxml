@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ItemsFormController">
+   <children>
+      <Label layoutX="31.0" layoutY="45.0" prefHeight="25.0" prefWidth="72.0" text="Item Code : " />
+      <TextField fx:id="txtCode" layoutX="103.0" layoutY="45.0" />
+      <Label layoutX="300.0" layoutY="45.0" prefHeight="25.0" prefWidth="72.0" text="Description : " />
+      <TextField fx:id="txtDescription" layoutX="372.0" layoutY="45.0" />
+      <Label layoutX="31.0" layoutY="78.0" prefHeight="25.0" prefWidth="72.0" text="Unit Price : " />
+      <TextField fx:id="txtPrice" layoutX="103.0" layoutY="78.0" />
+      <Label layoutX="300.0" layoutY="78.0" prefHeight="25.0" prefWidth="87.0" text="QTY on hand : " />
+      <TextField fx:id="txtQTY" layoutX="387.0" layoutY="78.0" />
+      <TableView fx:id="tblItems" layoutX="31.0" layoutY="155.0" prefHeight="200.0" prefWidth="554.0">
+        <columns>
+          <TableColumn fx:id="codeCol" prefWidth="75.0" text="Code" />
+          <TableColumn fx:id="descCol" prefWidth="237.33334350585938" text="Description" />
+            <TableColumn fx:id="priceCol" prefWidth="68.66668701171875" text="Unit Price" />
+            <TableColumn fx:id="qtyCol" prefWidth="93.33331298828125" text="QTY On Hand" />
+            <TableColumn fx:id="delCol" prefWidth="76.66668701171875" text="Delete" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnSave" layoutX="462.0" layoutY="366.0" mnemonicParsing="false" onAction="#btnOnActionSave" text="Save" />
+      <Button fx:id="btnUpdate" layoutX="530.0" layoutY="366.0" mnemonicParsing="false" onAction="#btnOnActionUpdate" text="Update" />
+      <TextField fx:id="txtSearch" layoutX="31.0" layoutY="116.0" prefHeight="25.0" prefWidth="149.0" promptText="Search by item code" />
+      <Button fx:id="btnSearch" layoutX="190.0" layoutY="116.0" mnemonicParsing="false" onAction="#btnOnActionSearch" text="Search" />
+      <Button fx:id="btnBack" layoutX="11.0" layoutY="9.0" mnemonicParsing="false" onAction="#btnOnActionBack" text="Back" />
+   </children>
+</AnchorPane>
